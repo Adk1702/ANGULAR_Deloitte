@@ -1,0 +1,42 @@
+<form [formGroup]="studentForm" (ngSubmit)="submit()">
+
+  <label>First Name:</label><br>
+  <input type="text" formControlName="firstName"><br>
+  <span *ngIf="studentForm.get('firstName')?.invalid && studentForm.get('firstName')?.touched">
+    enter at least 3 letters
+  </span><br><br>
+
+  <label>Middle Name:</label><br>
+  <input type="text" formControlName="middleName"><br><br>
+
+  <label>Last Name:</label><br>
+  <input type="text" formControlName="lastName"><br><br>
+
+  <label>Password:</label><br>
+  <input type="password" formControlName="password"><br><br>
+
+  <label>Roll Number:</label><br>
+  <input type="text" formControlName="rollNumber"><br><br>
+
+  <label>Gender:</label><br>
+  <select formControlName="gender">
+    <option value="">select</option>
+    <option value="male">male</option>
+    <option value="female">female</option>
+  </select><br><br>
+
+  <label>Email:</label><br>
+  <input type="email" formControlName="email"><br>
+  <span *ngIf="studentForm.get('email')?.invalid && studentForm.get('email')?.touched">
+    enter valid email
+  </span><br><br>
+
+  <label>Number of Users:</label><br>
+  <input type="number" formControlName="numberOfUsers"><br>
+  <span *ngIf="studentForm.get('numberOfUsers')?.invalid && studentForm.get('numberOfUsers')?.touched">
+    between 1 to 20
+  </span><br><br>
+
+  <button type="submit">Submit</button>
+
+</form>
