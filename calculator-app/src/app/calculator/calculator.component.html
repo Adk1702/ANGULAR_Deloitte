@@ -1,0 +1,33 @@
+<div class="calculator">
+
+  <input type="text" [(ngModel)]="screen" readonly>
+
+  <div class="buttons">
+
+    <button (click)="clear()">C</button>
+    <button (click)="clickButton('%')">%</button>
+    <button (click)="delete()">DEL</button>
+    <button (click)="clickButton('/')">÷</button>
+
+    <button (click)="clickButton('7')">7</button>
+    <button (click)="clickButton('8')">8</button>
+    <button (click)="clickButton('9')">9</button>
+    <button (click)="clickButton('*')">×</button>
+
+    <button (click)="clickButton('4')">4</button>
+    <button (click)="clickButton('5')">5</button>
+    <button (click)="clickButton('6')">6</button>
+    <button (click)="clickButton('-')">−</button>
+
+    <button (click)="clickButton('1')">1</button>
+    <button (click)="clickButton('2')">2</button>
+    <button (click)="clickButton('3')">3</button>
+    <button (click)="clickButton('+')">+</button>
+
+    <button (click)="clickButton('0')">0</button>
+    <button (click)="clickButton('.')">.</button>
+    <button (click)="equal()" class="equal">=</button>
+
+  </div>
+
+</div>
